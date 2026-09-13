@@ -26,7 +26,7 @@ services:
       # OPENALICE_TRADING_MODE: ${OPENALICE_TRADING_MODE}
       # OPENALICE_BROKER_PACK_AUTO_UPDATE: ${OPENALICE_BROKER_PACK_AUTO_UPDATE}
     volumes:
-      - openalice-data:/data
+      - ${DATA_PATH:-./data}:/data
       # Optional: reuse host CLI auth (don't do this on a shared server)
       # - ${HOME}/.claude:/data/home/.claude:ro
       # - ${HOME}/.codex:/data/home/.codex:ro
